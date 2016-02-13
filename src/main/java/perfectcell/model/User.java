@@ -1,5 +1,6 @@
 package perfectcell.model;
 
+import org.codehaus.jackson.map.annotate.JsonCachable;
 import perfectcell.repositories.DbPersistance;
 
 import javax.xml.bind.annotation.XmlRootElement;
@@ -9,10 +10,20 @@ import java.util.ArrayList;
  * Created by komlan on 12/02/16.
  */
 @XmlRootElement
+@JsonCachable
 public class User {
     private String name;
+    private String typeUsager;
     private String description;
     private ArrayList needs;
+
+    public String getTypeUsager() {
+        return typeUsager;
+    }
+
+    public void setTypeUsager(String typeUsager) {
+        this.typeUsager = typeUsager;
+    }
 
     public String getName() {
         return name;

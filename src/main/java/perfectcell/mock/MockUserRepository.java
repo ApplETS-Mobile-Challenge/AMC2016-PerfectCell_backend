@@ -33,6 +33,7 @@ public class MockUserRepository implements ICrudRepository<User> {
                         " Tenderloin biltong filet mignon beef ribs. Meatball kevin chuck boudin," +
                         " swine porchetta flank sirloin hamburger frankfurter sausage.");
         user1.setName("John Doe");
+        user1.setTypeUsager("giver");
         user1.setNeeds(needsList);
 
         User user2 = new User();
@@ -43,6 +44,7 @@ public class MockUserRepository implements ICrudRepository<User> {
                         " Tenderloin biltong filet mignon beef ribs. Meatball kevin chuck boudin," +
                         " swine porchetta flank sirloin hamburger frankfurter sausage.");
         user2.setName("John Smith");
+        user2.setTypeUsager("receiver");
         user2.setNeeds(needsList);
 
         User user3 = new User();
@@ -53,6 +55,7 @@ public class MockUserRepository implements ICrudRepository<User> {
                         " Tenderloin biltong filet mignon beef ribs. Meatball kevin chuck boudin," +
                         " swine porchetta flank sirloin hamburger frankfurter sausage.");
         user3.setName("John Williams");
+        user3.setTypeUsager("giver");
         user3.setNeeds(needsList);
 
         User user4 = new User();
@@ -63,6 +66,7 @@ public class MockUserRepository implements ICrudRepository<User> {
                         " Tenderloin biltong filet mignon beef ribs. Meatball kevin chuck boudin," +
                         " swine porchetta flank sirloin hamburger frankfurter sausage.");
         user4.setName("John Travolta");
+        user4.setTypeUsager("receiver");
         user4.setNeeds(needsList);
 
         usersList.add(user1);

@@ -5,6 +5,7 @@ import perfectcell.repositories.DbPersistance;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import javax.xml.bind.JAXBElement;
 import java.util.ArrayList;
 
@@ -31,9 +32,16 @@ public class UserResources {
 
     @GET
     @Path("/deleteuser/{key}")
-    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+
     public boolean deleteUser(@PathParam("key")String key) {
         return dbPersistance.userRepository.Delete(key);
     }
 
+    @POST
+    @Path("/adduser")
+    public Response AddUser(User user) {
+        String output = user.toString();
+        dbPersistance.userRepository.Add(user);
+        return Response.status(200).entity(output).build();
+    }
 }
