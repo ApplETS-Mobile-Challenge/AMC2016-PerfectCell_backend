@@ -6,7 +6,6 @@ import perfectcell.repositories.DbPersistance;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.xml.bind.JAXBElement;
 import java.util.ArrayList;
 
 @Path("users")

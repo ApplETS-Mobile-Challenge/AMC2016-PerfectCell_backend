@@ -12,6 +12,7 @@ import java.util.ArrayList;
 /**
  * Created by jjgha on 2016-02-13.
  */
+@Path("donations")
 public class DonationResources {
     private DbPersistance dbPersistance = DbPersistance.getInstance();
 
