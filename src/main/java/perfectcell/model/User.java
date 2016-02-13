@@ -1,5 +1,7 @@
 package perfectcell.model;
 
+import perfectcell.repositories.DbPersistance;
+
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
@@ -11,7 +13,6 @@ public class User {
     private String name;
     private String description;
     private ArrayList needs;
-
 
     public String getName() {
         return name;

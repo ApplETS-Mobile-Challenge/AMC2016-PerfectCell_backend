@@ -5,6 +5,7 @@ package perfectcell.api.users;
  */
 
 import perfectcell.model.User;
+import perfectcell.repositories.DbPersistance;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -15,11 +16,13 @@ import java.util.ArrayList;
 @Path("users")
 public class UserResources {
 
+    private DbPersistance dbPersistance = DbPersistance.getInstance();
+
     @GET
     @Path("/list")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public ArrayList<User> getUsers() {
-        User user = new User();
+        /*User user = new User();
         user.setName("john doe");
         user.setDescription("potato");
         ArrayList<String> needs = new ArrayList<>();
@@ -27,7 +30,7 @@ public class UserResources {
         user.setNeeds(needs);
 
         ArrayList<User> users = new ArrayList<>();
-        users.add(user);
-        return users;
+        users.add(user);*/
+        return dbPersistance.userRepository.List();
     }
 }

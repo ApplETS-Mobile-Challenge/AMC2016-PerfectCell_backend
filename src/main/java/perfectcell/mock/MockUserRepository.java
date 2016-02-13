@@ -65,8 +65,11 @@ public class MockUserRepository implements ICrudRepository<User> {
         user4.setName("John Doe");
         user4.setNeeds(needsList);
 
-        usersList.add(new User() {
-        });
+        usersList.add(user1);
+        usersList.add(user2);
+        usersList.add(user3);
+        usersList.add(user4);
+
     }
 
 

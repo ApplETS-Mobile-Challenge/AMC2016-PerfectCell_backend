@@ -1,4 +1,4 @@
-package perfectcell;
+package perfectcell.repositories;
 
 import perfectcell.mock.MockUserRepository;
 
@@ -7,8 +7,8 @@ import perfectcell.mock.MockUserRepository;
  */
 public class DbPersistance {
     public MockUserRepository userRepository;
-    private DbPersistance instance = null;
-    public DbPersistance getInstance() {
+    private static DbPersistance instance = null;
+    public static DbPersistance getInstance() {
         if (instance == null) {
             instance = new DbPersistance();
         }
