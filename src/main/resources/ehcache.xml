@@ -18,7 +18,7 @@
     defined on your system. On a standard Linux system this will be /tmp" -->
 
 
-    <cache name="partners" eternal="false"
+    <cache name="users" eternal="false"
            maxElementsInMemory="100" overflowToDisk="false" diskPersistent="false"
            timeToIdleSeconds="0" timeToLiveSeconds="1200"
            memoryStoreEvictionPolicy="LRU" statistics="true"/>

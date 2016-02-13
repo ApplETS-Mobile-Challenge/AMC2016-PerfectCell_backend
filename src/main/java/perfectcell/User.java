@@ -1,11 +1,13 @@
 package perfectcell;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
 /**
  * Created by komlan on 12/02/16.
  */
-public class AbstractUser {
+@XmlRootElement
+public class User {
     private String name;
     private String description;
     private ArrayList needs;
