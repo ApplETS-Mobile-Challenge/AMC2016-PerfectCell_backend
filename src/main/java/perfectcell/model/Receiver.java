@@ -1,4 +1,4 @@
-package perfectcell;
+package perfectcell.model;
 
 /**
  * Created by komlan on 12/02/16.

@@ -6,9 +6,9 @@ import javax.xml.bind.JAXBContext;
 
 import com.sun.jersey.api.json.JSONConfiguration;
 import com.sun.jersey.api.json.JSONJAXBContext;
-import perfectcell.User;
-import perfectcell.Giver;
-import perfectcell.Receiver;
+import perfectcell.model.User;
+import perfectcell.model.Giver;
+import perfectcell.model.Receiver;
 
 @Provider
 @SuppressWarnings("rawtypes")

@@ -1,4 +1,4 @@
-package perfectcell;
+package perfectcell.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
