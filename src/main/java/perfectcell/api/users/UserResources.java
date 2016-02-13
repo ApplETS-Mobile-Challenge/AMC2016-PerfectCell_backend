@@ -1,16 +1,11 @@
 package perfectcell.api.users;
 
-/**
- * Created by gnut3ll4 on 22/01/16.
- */
-
 import perfectcell.model.User;
 import perfectcell.repositories.DbPersistance;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.xml.bind.JAXBElement;
 import java.util.ArrayList;
 
 @Path("users")
@@ -21,16 +16,24 @@ public class UserResources {
     @GET
     @Path("/list")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public ArrayList<User> getUsers() {
-        /*User user = new User();
-        user.setName("john doe");
-        user.setDescription("potato");
-        ArrayList<String> needs = new ArrayList<>();
-        needs.add("i need you");
-        user.setNeeds(needs);
-
-        ArrayList<User> users = new ArrayList<>();
-        users.add(user);*/
+    public ArrayList<User> listUsers() {
         return dbPersistance.userRepository.List();
     }
+
+    @GET
+    @Path("/getuser/{key}")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public ArrayList<User> getUser(@PathParam("key")String key) {
+        ArrayList<User> user = new ArrayList<>();
+        user.add(dbPersistance.userRepository.Get(key));
+        return user;
+    }
+
+    @GET
+    @Path("/deleteuser/{key}")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public boolean deleteUser(@PathParam("key")String key) {
+        return dbPersistance.userRepository.Delete(key);
+    }
+
 }

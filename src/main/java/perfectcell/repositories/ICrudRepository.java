@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public interface ICrudRepository<T> {
     T Add(T model);
     T Edit(T model);
-    boolean Delete(T model);
+    boolean Delete(String name);
     T Get(String name);
     ArrayList<T> List();
 }

@@ -42,7 +42,7 @@ public class MockUserRepository implements ICrudRepository<User> {
                         "Tongue kevin corned beef turducken pork loin cow drumstick doner jerky tail andouille pig." +
                         " Tenderloin biltong filet mignon beef ribs. Meatball kevin chuck boudin," +
                         " swine porchetta flank sirloin hamburger frankfurter sausage.");
-        user2.setName("John Doe");
+        user2.setName("John Smith");
         user2.setNeeds(needsList);
 
         User user3 = new User();
@@ -52,7 +52,7 @@ public class MockUserRepository implements ICrudRepository<User> {
                         "Tongue kevin corned beef turducken pork loin cow drumstick doner jerky tail andouille pig." +
                         " Tenderloin biltong filet mignon beef ribs. Meatball kevin chuck boudin," +
                         " swine porchetta flank sirloin hamburger frankfurter sausage.");
-        user3.setName("John Doe");
+        user3.setName("John Williams");
         user3.setNeeds(needsList);
 
         User user4 = new User();
@@ -62,7 +62,7 @@ public class MockUserRepository implements ICrudRepository<User> {
                         "Tongue kevin corned beef turducken pork loin cow drumstick doner jerky tail andouille pig." +
                         " Tenderloin biltong filet mignon beef ribs. Meatball kevin chuck boudin," +
                         " swine porchetta flank sirloin hamburger frankfurter sausage.");
-        user4.setName("John Doe");
+        user4.setName("John Travolta");
         user4.setNeeds(needsList);
 
         usersList.add(user1);
@@ -92,11 +92,10 @@ public class MockUserRepository implements ICrudRepository<User> {
     }
 
     @Override
-    public boolean Delete(User model) {
+    public boolean Delete(String name) {
         for (int i = 0; i < usersList.size(); ++i) {
-            if (usersList.get(i).getName().equals(model.getName())) {
+            if (usersList.get(i).getName().equals(name)) {
                 usersList.remove(i);
-                usersList.add(model);
                 return true;
             }
         }
