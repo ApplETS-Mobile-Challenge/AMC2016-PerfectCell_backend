@@ -20,6 +20,10 @@ task stage {
 	dependsOn build
 }
 
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.0' //version required
+}
+
 dependencies {
 	compile "javax.ws.rs:jsr311-api:1.1.1"
 
